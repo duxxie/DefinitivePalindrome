@@ -6,8 +6,9 @@ int main()
 {
 	char string[100];
 	int j = 0;
+
 	printf("Insert Something: ");
-	scanf("%s", string);
+    fgets(string, sizeof(string), stdin);
 	printf("String: %s", string);
 
 	int size = strlen(string);
@@ -17,6 +18,7 @@ int main()
 		palindrome[j] = string[i];
 		j++;
 	}
+	
 	palindrome[j] = '\0';
 	
 	printf("\n");
